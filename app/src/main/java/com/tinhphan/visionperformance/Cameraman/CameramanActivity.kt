@@ -15,7 +15,7 @@ import com.tinhphan.visionperformance.Model.PhotoContentType
 import com.tinhphan.visionperformance.Model.ImageAnaly
 import com.tinhphan.visionperformance.R
 import com.tinhphan.visionperformance.Utils.BitmapUtils
-import com.tinhphan.visionperformance.Utils.CommunityKey
+import com.tinhphan.visionperformance.Utils.CommunityKeyUtils
 
 class CameramanActivity : AppCompatActivity() {
 
@@ -32,7 +32,7 @@ class CameramanActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == codeRequestOpenCamera) {
             data?.extras?.get("data")?.let {
-                resultViewTakeAPhoto.setImageBitmap(it as Bitmap)
+                disImgPhotoResult.setImageBitmap(it as Bitmap)
                 openAnalyzing(it as Bitmap)
             }
         }
@@ -42,18 +42,18 @@ class CameramanActivity : AppCompatActivity() {
 
     //region UTILS
     private fun mapView() {
-        actionTakePhotoFace = findViewById(R.id.action_take_face)
-        actionTakePhotoOther = findViewById(R.id.action_take_label)
-        resultViewTakeAPhoto = findViewById(R.id.result_take_a_photo)
+        actBtnTakePhotoFace = findViewById(R.id.act_button_face_photo)
+        actBtnTakePhotoOther = findViewById(R.id.act_button_label_photo)
+        disImgPhotoResult = findViewById(R.id.dis_image_photo_result)
     }
 
     private fun onTakeAPhotoClick() {
-        actionTakePhotoFace.setOnClickListener {
+        actBtnTakePhotoFace.setOnClickListener {
             photoPhotoContentType = PhotoContentType.FACE_DETECTION
             openCamera()
         }
 
-        actionTakePhotoOther.setOnClickListener {
+        actBtnTakePhotoOther.setOnClickListener {
             photoPhotoContentType = PhotoContentType.LABEL_DETECTION
             openCamera()
         }
@@ -75,9 +75,9 @@ class CameramanActivity : AppCompatActivity() {
     private fun openAnalyzing(bitmap: Bitmap) {
         val intent = Intent(this, AnalyzingActivity::class.java)
         val bundle = Bundle()
-        bundle.putByteArray(CommunityKey.OPEN_ANALYZING, BitmapUtils.bitmapToByteArray(bitmap))
+        bundle.putByteArray(CommunityKeyUtils.OPEN_ANALYZING, BitmapUtils.bitmapToByteArray(bitmap))
         val imageAnaly = ImageAnaly(photoPhotoContentType,BitmapUtils.bitmapToByteArray(bitmap))
-        intent.putExtra(CommunityKey.OPEN_ANALYZING,imageAnaly.asBundleParams())
+        intent.putExtra(CommunityKeyUtils.OPEN_ANALYZING,imageAnaly.asBundleParams())
         startActivity(intent)
     }
 
@@ -86,9 +86,9 @@ class CameramanActivity : AppCompatActivity() {
 
 
     //region VARS
-    private lateinit var actionTakePhotoFace: Button
-    private lateinit var actionTakePhotoOther: Button
-    private lateinit var resultViewTakeAPhoto: ImageView
+    private lateinit var actBtnTakePhotoFace: Button
+    private lateinit var actBtnTakePhotoOther: Button
+    private lateinit var disImgPhotoResult: ImageView
     private lateinit var photoPhotoContentType: PhotoContentType
 
     private val codeRequestOpenCamera: Int = 309

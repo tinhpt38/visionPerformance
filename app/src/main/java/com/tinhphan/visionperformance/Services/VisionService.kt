@@ -1,31 +1,18 @@
 package com.tinhphan.visionperformance.Services
 
-import android.content.Context
-import android.graphics.Bitmap
 import android.os.AsyncTask
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
-import org.apache.commons.io.IOUtils
-import org.json.JSONObject
-import java.io.InputStream
-import java.net.URL
-import android.graphics.Bitmap.CompressFormat
-import android.R.attr.bitmap
 import com.google.api.services.vision.v1.model.AnnotateImageRequest
 import com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest
 import com.google.api.services.vision.v1.model.Feature
 import com.google.api.services.vision.v1.model.Image
 import com.google.gson.JsonObject
-import com.tinhphan.visionperformance.Analyzing.AnalyzingActivity
 import com.tinhphan.visionperformance.AppInstance
 import com.tinhphan.visionperformance.Model.ImageAnaly
 import com.tinhphan.visionperformance.Model.PhotoContentType
-import java.io.ByteArrayInputStream
-import java.io.ByteArrayOutputStream
+import com.tinhphan.visionperformance.Utils.FacesDetectionJsonUtils
 
 
-class VisionService(val context: Context, val imageAnaly: ImageAnaly) : AsyncTask<Unit, Int, JsonObject>() {
+class VisionService(val imageAnaly: ImageAnaly) : AsyncTask<Unit, Int, JsonObject>() {
 
     override fun doInBackground(vararg params: Unit?): JsonObject {
 

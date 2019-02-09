@@ -23,9 +23,14 @@
         </activity>
         <activity android:name=".Cameraman.CameramanActivity">
         </activity>
-        <activity android:name=".Analyzing.AnalyzingActivity"
-            android:label=""
-            android:theme="@style/ActivityDialog">
+        <activity
+                android:name=".Analyzing.AnalyzingActivity"
+                android:label=""
+                android:theme="@style/ActivityDialog">
+        </activity>
+        <activity android:name=".AnalyzerResult.FacesResultActivity">
+        </activity>
+        <activity android:name=".AnalyzerResult.LabelResultActivity">
         </activity>
     </application>
 
