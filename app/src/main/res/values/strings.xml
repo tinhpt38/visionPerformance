@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Vision Performance</string>
+    <string name="VISION_API_KEY" translatable="false">AIzaSyBYxh_opfRgMadf_mX_oqKIHnbwaotHxew</string>
+</resources>

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "465226280663",
+    "firebase_url": "https://central-octane-228401.firebaseio.com",
+    "project_id": "central-octane-228401",
+    "storage_bucket": "central-octane-228401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465226280663:android:9b03b14cdc46218e",
+        "android_client_info": {
+          "package_name": "com.tinhphan.receivejsonexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465226280663-k4re55tud4ivrhmte1v2q04cc1bn407f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1PEm0C21qhGmDhKli8ozMq2pAbmJHU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465226280663:android:b14e452c36237662",
+        "android_client_info": {
+          "package_name": "com.tinhphan.visionperformance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465226280663-k4re55tud4ivrhmte1v2q04cc1bn407f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1PEm0C21qhGmDhKli8ozMq2pAbmJHU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
