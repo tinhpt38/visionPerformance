@@ -10,7 +10,7 @@
     tools:context=".Analyzing.AnalyzingActivity">
 
     <ProgressBar
-        android:id="@+id/progress_bar_analyzing"
+        android:id="@+id/dis_progress_analyzing"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,14 +22,14 @@
         app:layout_constraintWidth_percent="0.2" />
 
     <TextView
-        android:id="@+id/display_current_progress"
+        android:id="@+id/dis_text_progress_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0%"
-        app:layout_constraintBottom_toBottomOf="@id/progress_bar_analyzing"
-        app:layout_constraintLeft_toLeftOf="@id/progress_bar_analyzing"
-        app:layout_constraintRight_toRightOf="@id/progress_bar_analyzing"
-        app:layout_constraintTop_toTopOf="@id/progress_bar_analyzing" />
+        app:layout_constraintBottom_toBottomOf="@id/dis_progress_analyzing"
+        app:layout_constraintLeft_toLeftOf="@id/dis_progress_analyzing"
+        app:layout_constraintRight_toRightOf="@id/dis_progress_analyzing"
+        app:layout_constraintTop_toTopOf="@id/dis_progress_analyzing" />
 
     <TextView
         android:id="@+id/text_analyzing"
@@ -39,10 +39,10 @@
         android:text="Analyzing..."
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar_analyzing" />
+        app:layout_constraintTop_toBottomOf="@id/dis_progress_analyzing" />
 
     <Button
-        android:id="@+id/action_cancel"
+        android:id="@+id/act_button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

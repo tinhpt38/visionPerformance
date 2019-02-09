@@ -1,4 +1,4 @@
-package com.tinhphan.visionperformance.Services
+package com.tinhphan.visionperformance.Utils
 
 import com.google.api.client.json.Json
 import com.google.api.services.vision.v1.model.FaceAnnotation
@@ -10,7 +10,6 @@ import org.json.JSONObject
 class FacesDetectionJsonUtils() {
     companion object {
         fun asFacesJson(faceAnnotations: List<FaceAnnotation>): JsonObject {
-            val numbersOfFace = faceAnnotations.size
             val faces = mutableListOf<Face>()
             for (i in 0..faceAnnotations.size - 1) {
                 faces.add(

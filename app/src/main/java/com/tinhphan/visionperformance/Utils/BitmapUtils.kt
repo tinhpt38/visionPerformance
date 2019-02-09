@@ -7,7 +7,6 @@ import java.io.ByteArrayOutputStream
 
 class BitmapUtils {
     companion object {
-
         fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
             val bos = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos)
