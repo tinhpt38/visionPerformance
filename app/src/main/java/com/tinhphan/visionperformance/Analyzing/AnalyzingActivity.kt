@@ -57,7 +57,7 @@ class AnalyzingActivity : AppCompatActivity() {
     private fun openFacesResultActivity(data: JsonObject){
         val intent = Intent(this,FacesResultActivity::class.java)
         val bundle = Bundle()
-        //todo: create object result
+        //todo: create object result???
     }
 
     private fun openLabelResultActivity(data: JsonObject){
